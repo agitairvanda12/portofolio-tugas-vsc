@@ -1,0 +1,379 @@
+:root {
+    --primaryTextColor: #000000;
+    --secondaryTextColor: #666666;
+    --borderColor: #cccccc;
+    --linecolor: #cccccc;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h1, h2, h3, h4, h5, h6, strong {
+    color: var(--primaryTextColor);
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.9rem;
+}
+
+p, span, label, input, textarea, li {
+    color: var(--secondaryTextColor);
+}
+
+a {
+    text-decoration: none;
+}
+
+.main-container {
+    width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 20px;
+}
+
+@media screen and (max-width: 1200px) {
+    .main-container {
+        width: 90%;
+    }
+}
+
+.btn {
+    padding: 0.8rem 1.5rem;
+    background: white;
+    border: 1.5px solid var(--borderColor);
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.btn:hover {
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+}
+
+.section-title{
+    margin: 1rem 0 4rem;
+    font-size: 2rem;
+}
+
+.pre-title {
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+    color: var(--secondaryTextColor);
+    position: relative;
+    padding-left: 40px;
+    width: fit-content;
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+
+.pre-title::before {
+    content: "";
+    width: 30px;
+    height: 1px;
+    background: var(--linecolor);
+    position: absolute;
+    display: block;
+    left: 0;
+}
+
+.grid-3{
+    display: grid;
+    grid-template-columns: repeat(auto-fit ,minmax(250px, 1fr));
+    justify-content: center;
+    margin-top: 40px;
+    gap: 40px;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 3rem; 
+    background-color: #666666;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+    padding-right: 2rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 2rem;
+    margin-left: 1rem;
+}
+
+.logo a {
+    color: var(--primaryTextColor);
+    text-align: left;
+}
+
+nav ul li {
+    display: flex;
+    align-items: center;
+}
+
+nav ul li a {
+    color: var(--primaryTextColor);
+}
+
+.burger div {
+    width: 25px;
+    height: 2px;
+    background-color: #000;
+    margin: 7px;
+    transition: all 0.3s;
+    z-index: 99;
+}
+
+.burger {
+    z-index: 90;
+    position: fixed;
+}
+
+.header{
+    background-color: #f0f0f0; 
+    padding: 20px 0; 
+}
+
+#hero {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+#hero-name {
+    height: 720px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 2rem
+}
+
+.hero-left {
+    padding-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 2rem;
+}
+
+.hero-right img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.hero-name {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0.5rem 0 1rem;
+    text-align: left;
+}
+
+.hero-name span {
+    color: var(--primaryTextColor);
+}
+
+#service{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 20px;
+        text-align: center;
+}
+
+.service-item {
+    background-color: rgba(225,225, 225, 0.8);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    transition: background-color 0.3s;
+    text-align: center;
+    margin: 10px;
+}
+
+.service-item:hover{
+    background-color: rgba(225,225, 225, 1);
+}
+
+.service-icon{
+    background: var(--thirdBackgroundColor);
+    margin: 0 auto;
+    width: fit-content;
+    padding: 1rem 1.3rem;
+    border-radius: 0.5rem;
+}
+
+.pre-title{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.section-title{
+    text-align: center;
+}
+
+.service .pre-title{
+    margin: 0 auto;
+}
+
+.service-title{
+    text-align: center;
+}
+
+.service{
+    padding: 3rem 2rem;
+    text-align: center;
+    background: var(--primaryTextColor);
+    border-radius: var(--itemBorderRadius);
+}
+
+.service h4{
+    margin: 1.5rem 0;
+    font-weight: 500;
+    font-size: 1.05rem;
+}
+
+.service-icon svg{
+    fill: #301a69;
+}
+
+/* Portfolio section styling */
+#portofolios {
+    padding: var(--sectionPadding);
+    margin-top: 100px;
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+
+.Portofolio {
+    border-radius: var(--itemBorderRadius);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 50px;
+    overflow: hidden;
+}
+
+.Portofolio-cover img {
+    width: 100%; 
+   height: 100;
+   object-fit: cover;
+}
+
+
+.Portofolio-info {
+    padding: 20px;
+    background-color: #f9f9f9; 
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    margin-bottom: 30px;
+}
+
+.Portofolio-title h4 {
+    margin-bottom: 15px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.Portofolio-tags {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.Portofolio-tags div {
+    background-color: #e0e0e0; 
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9em; 
+}
+
+#education {
+    display: flex;
+    text-align: center; 
+    padding: 50px 0; 
+    gap: 2rem;
+}
+
+.education.main-container {
+    max-width: 800px;
+    margin: 0 auto; 
+}
+
+.education-item {
+    margin-bottom: 30px; 
+}
+
+.line {
+    width: 50px; 
+    height: 2px; 
+    margin: 0 auto 10px; 
+}
+
+.education-info {
+    margin-top: 10px; 
+}
+
+
+.education-title {
+    font-size: 1.5rem; 
+    font-weight: bold; 
+    margin-bottom: 5px; 
+}
+
+.education-years {
+    font-size: 1.2rem; 
+    color: gray; 
+    margin-top: 0; 
+}
+
+#contact{
+    padding: var(--sectionPadding);
+}
+
+.contact {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+    gap: 3rem;
+
+}
+
+.contact-form div{
+    margin-bottom: 1.4rem;
+}
+
+.contact-form  input, .contact-form text area {
+    width: 100%;
+    padding : .75rem 1.3rem;
+    font-family: 'Times New Roman', Times, serif;
+    background: var(--secondaryBackgroundColor);
+    border: 1px solid var(--borderColor);
+    border-radius: 3px;
+    resize: none;
+}
+
+
+
